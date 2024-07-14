@@ -42,7 +42,7 @@ int stoi()
     string input;
     cin >> input;
 
-    return input == "yes";
+    return (input == "yes" || input == "Yes" || input == "Y" || input == "y");
 }
 
 int main() {
