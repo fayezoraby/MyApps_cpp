@@ -1,14 +1,31 @@
 #include <iostream>
+#include <thread>
+#include <chrono>
 using namespace std;
 
 
 int main()
 {
     int sum = 20 + 5 * 4 / 2 - 2;
-    cout << "1 - 5*4/2 = 10" << endl;
-    cout << "             ^" << endl;
-    cout << "2 - 20 +    10 - 2 = 28" << endl; 
+    
+    cout << "5*4/2 = 10" << endl;
+    std::this_thread::sleep_for(std::chrono::seconds(3));
+    cout << "         ^" << endl;
+    std::this_thread::sleep_for(std::chrono::seconds(3));
+    cout << "20 +    10 - 2 = 28" << endl; 
+    std::this_thread::sleep_for(std::chrono::seconds(3));
     cout << "\nThe final sum is : " << sum;
+    std::this_thread::sleep_for(std::chrono::seconds(3));
+
+
+
+    // if (sum == 28 && sum > 5)
+    // {
+        
+
+    // }
+
+
     return 0;
 }
 
